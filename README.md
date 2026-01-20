@@ -16,11 +16,23 @@ This guide is designed for developers who need to run legacy projects alongside 
 
 Before starting, you need to download the **PHP Binaries** first. You can download them via the following link: [https://novadev.my.id/4Vufz0Q](https://novadev.my.id/4Vufz0Q).
 
+After downloading, extract the PHP binary zip file into your XAMPP installation directory (e.g., `C:\xampp\`). Ensure the folder name matches the version, such as `C:\xampp\php5_6_12` or `C:\xampp\php8_3_21`.
+
 > **Warning:** Pay close attention to the PHP binaries folder name when extracting it to your XAMPP directory. The examples in this guide use the `C:\xampp\` directory.
 
 ## Configuration Steps
 
-### 1. Edit httpd-xampp.conf
+### 1. Configure php.ini
+
+Go to your PHP binaries folder and look for the `php.ini` file. If it doesn't exist, copy `php.ini-production` and rename it to `php.ini`.
+
+Open `php.ini` and make the following changes:
+- **Enable extension_dir**: Find `;extension_dir` and remove the `;` to activate it. Set its value to the absolute path of your PHP version's `ext` folder.
+  - Example for PHP 5.6.12: `extension_dir = "C:\xampp\php5_6_12\ext"`
+  - Example for PHP 8.3.21: `extension_dir = "C:\xampp\php8_3_21\ext"`
+- **Enable Essential Extensions**: Search for the `Dynamic Extensions` section and uncomment the extensions required for your projects by removing the `;` prefix. The following are commonly used: `bz2, curl, fileinfo, gd, gettext, intl, mbstring, exif, mysqli, openssl, pdo_mysql, pdo_odbc, pdo_pgsql, pdo_sqlite`.
+
+### 2. Edit httpd-xampp.conf
 
 Open your original XAMPP `C:\xampp\apache\conf\extra\httpd-xampp.conf` file. Scroll to the very bottom and add the following configuration code according to the PHP version you are using.
 
@@ -74,7 +86,7 @@ Listen 1156
 
 You can add as many PHP versions as you need by repeating the pattern above and adjusting the ports and directory names accordingly.
 
-### 2. Create info.php File
+### 3. Create info.php File
 
 Open the `C:\xampp\htdocs` directory and create a new file named `info.php`. Insert the following code:
 
@@ -84,7 +96,7 @@ Open the `C:\xampp\htdocs` directory and create a new file named `info.php`. Ins
 
 This file only needs to be created once for all the PHP versions you configure.
 
-### 3. Restart XAMPP
+### 4. Restart XAMPP
 
 Once all configurations are complete, please restart Apache through the XAMPP Control Panel. If successful, the ports you have opened will appear as shown in the image below:
 
@@ -107,3 +119,4 @@ After Apache is running again, you can test each PHP version by accessing the fo
 **Happy coding!**
 
 — Nova Ardiansyah
+
