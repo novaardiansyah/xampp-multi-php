@@ -16,13 +16,13 @@ This guide is designed for developers who need to run legacy projects alongside 
 
 Before starting, you need to download the **PHP Binaries** first. You can download them via the following link: [https://novadev.my.id/4Vufz0Q](https://novadev.my.id/4Vufz0Q).
 
-> **Warning:** Pay close attention to the PHP binaries folder name when extracting it to your XAMPP directory. The examples in this guide use the `C:/xampp/` directory.
+> **Warning:** Pay close attention to the PHP binaries folder name when extracting it to your XAMPP directory. The examples in this guide use the `C:\xampp\` directory.
 
 ## Configuration Steps
 
 ### 1. Edit httpd-xampp.conf
 
-Open your original XAMPP `httpd-xampp.conf` file. Scroll to the very bottom and add the following configuration code according to the PHP version you are using.
+Open your original XAMPP `C:\xampp\apache\conf\extra\httpd-xampp.conf` file. Scroll to the very bottom and add the following configuration code according to the PHP version you are using.
 
 **Example for PHP 8.3.21 (Port 1183):**
 
