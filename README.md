@@ -30,7 +30,9 @@ Open `php.ini` and make the following changes:
 - **Enable extension_dir**: Find `;extension_dir` and remove the `;` to activate it. Set its value to the absolute path of your PHP version's `ext` folder.
   - Example for PHP 5.6.12: `extension_dir = "C:\xampp\php5_6_12\ext"`
   - Example for PHP 8.3.21: `extension_dir = "C:\xampp\php8_3_21\ext"`
-- **Enable Essential Extensions**: Search for the `Dynamic Extensions` section and uncomment the extensions required for your projects by removing the `;` prefix. The following are commonly used: `bz2, curl, fileinfo, gd, gettext, intl, mbstring, exif, mysqli, openssl, pdo_mysql, pdo_odbc, pdo_pgsql, pdo_sqlite`.
+- **Enable Essential Extensions**: Search for the `Dynamic Extensions` section and uncomment the extensions required for your projects by removing the `;` prefix. The following are commonly used: `bz2, curl, fileinfo, gd, gettext, intl, mbstring, exif, odbc, mysqli, pgsql, openssl, pdo_mysql, pdo_odbc, pdo_pgsql, pdo_sqlite, sqlite3, zip`.
+
+> **Note:** Just a heads up: extensions depend on the PHP version. Check your `ext` folder to see what you've got to work with.
 
 ### 2. Edit httpd-xampp.conf
 
