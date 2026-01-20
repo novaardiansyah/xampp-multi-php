@@ -14,7 +14,7 @@ This guide is designed for developers who need to run legacy projects alongside 
 
 ## First Preparation
 
-Before starting, you need to download the **PHP Binaries** first. You can download them via the following link: [https://novadev.my.id/4Vufz0Q](https://novadev.my.id/4Vufz0Q).
+Before starting, you need to download the **PHP Binaries** first. You can download them via the following link: [https://novadev.my.id/4Vufz0Q](https://novadev.my.id/4Vufz0Q) or [https://windows.php.net/downloads/releases/archives](https://windows.php.net/downloads/releases/archives).
 
 After downloading, extract the PHP binary zip file into your XAMPP installation directory (e.g., `C:\xampp\`). Ensure the folder name matches the version, such as `C:\xampp\php5_6_12` or `C:\xampp\php8_3_21`.
 
